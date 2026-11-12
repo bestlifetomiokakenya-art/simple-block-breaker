@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="マウスか矢印キーでパドルを動かして遊ぶ、シンプルなブロック崩しゲーム。遊び方を読んですぐプレイできます。">
+  <title>一番シンプルなブロック崩しゲーム</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top">ブロック崩し</a>
+    <a class="header-link" href="#how-to-play">遊び方</a>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <p class="eyebrow">いつでも、すぐに遊べるミニゲーム</p>
+        <h1 id="hero-title">一番シンプルな<br><span>ブロック崩しゲーム</span></h1>
+        <p class="hero-copy">マウスか矢印キーでパドルを動かして、ボールを打ち返そう。</p>
+        <a class="primary-link" href="#game-section">ゲームを始める <span aria-hidden="true">↓</span></a>
+        <p class="hero-note">ルールはかんたん。まずは1プレイ。</p>
+      </div>
+    </section>
+
+    <section class="game-section section-shell" id="game-section" aria-labelledby="game-title">
+      <div class="section-heading">
+        <p class="eyebrow">READY?</p>
+        <h2 id="game-title">さっそく遊んでみよう</h2>
+        <p>開始ボタンを押すと、ボールが動き出します。</p>
+      </div>
+      <div class="game-shell">
+        <section class="status" aria-label="ゲーム状況">
+          <p>スコア <strong id="score">0</strong></p>
+          <p>残機 <strong id="lives">3</strong></p>
+        </section>
+        <div class="board-wrap">
+          <canvas id="game" width="800" height="560" aria-label="ブロック崩しゲーム画面"></canvas>
+          <div class="overlay" id="overlay">
+            <p id="message">ボタンを押してゲーム開始</p>
+            <button id="game-button" type="button">ゲーム開始</button>
+          </div>
+        </div>
+        <p class="help">操作：マウスを左右に動かすか、← → キー</p>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-to-play" aria-labelledby="how-title">
+      <div class="section-shell">
+        <div class="section-heading">
+          <p class="eyebrow">HOW TO PLAY</p>
+          <h2 id="how-title">遊び方</h2>
+          <p>覚えることは、たったこれだけ。</p>
+        </div>
+        <ol class="steps">
+          <li><span class="step-number">01</span><div><h3>ゲームをスタート</h3><p>ゲーム画面の「ゲーム開始」を押すとボールが動き出します。</p></div></li>
+          <li><span class="step-number">02</span><div><h3>パドルを動かそう</h3><p>マウスを左右に動かすか、キーボードの ← → キーでパドルを操作します。ボールを打ち返して、上のブロックに当てましょう。</p></div></li>
+          <li><span class="step-number">03</span><div><h3>ブロックを全部消そう</h3><p>ブロックを壊すとスコアが加算。全部消せばゲームクリアです。ボールを落とすと残機が1つ減り、残機がなくなるとゲームオーバーです。</p></div></li>
+        </ol>
+        <aside class="tip"><strong>中央ヒットで貫通！</strong><span>パドルの中央付近にボールを当てると貫通モードに。赤くなったボールはブロックを跳ね返らずに壊し、次にパドルへ当たると通常モードに戻ります。</span></aside>
+      </div>
+    </section>
+
+    <section class="features section-shell" aria-labelledby="features-title">
+      <div class="section-heading">
+        <p class="eyebrow">JUST THE BASICS</p>
+        <h2 id="features-title">気軽に遊べる3つのポイント</h2>
+      </div>
+      <div class="feature-grid">
+        <article><span aria-hidden="true">01</span><h3>すぐ遊べる</h3><p>ゲーム開始ボタンを押せば、すぐにプレイスタート。</p></article>
+        <article><span aria-hidden="true">02</span><h3>操作はかんたん</h3><p>マウスか左右の矢印キーだけでパドルを操作。</p></article>
+        <article><span aria-hidden="true">03</span><h3>PCでローカル動作</h3><p>ファイルをブラウザで開いて遊べる個人向け試作版です。</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><p>個人利用向けの試作ゲームです。</p></footer>
+</body>
+</html>
